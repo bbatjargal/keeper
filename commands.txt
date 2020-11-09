@@ -88,6 +88,7 @@ Set up environment for React.js
 
 > sudo docker-compose build
 > sudo docker-compose up
+> sudo docker-compose up -d
 
 - installing postman
 > sudo snap install postman
@@ -119,6 +120,13 @@ Set up environment for React.js
 
 - setting up environment on AWS.
 - installing required programs.
+--install docker
+--configure in app.py
+
+app.run(debug=False, host='0.0.0.0', port=80)
+
+- building react app
+> npm run build
 
 
 
