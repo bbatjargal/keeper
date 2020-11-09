@@ -1,0 +1,124 @@
+Set up environment for React.js
+- installing node.js
+> sudo apt install npm
+> sudo apt install nodejs
+> npm -v
+> nodejs --version
+> npm cache clean -f
+> npm install -g n
+> sudo n stable
+> nodejs --version
+> node -v
+> npm -v
+> wget https://nodejs.org/dist/v14.15.0/node-v14.15.0-linux-x64.tar.xz
+> sudo apt-get install xz-utils
+> sudo tar -xJf node-v14.15.0-linux-x64.tar.xz -C /usr/local --strip-components=1
+> sudo apt-get remove nodejs
+> sudo ln -s /usr/local/bin/node /usr/bin/nodejs
+
+
+- creating react.js app
+> npx create-react-app keeper-ui
+> cd keeper-ui
+> npm start
+> npm install react-router-dom
+
+- installing visual studio code
+> sudo snap install --classic code 
+
+> npm install @material-ui/core
+> npm install @material-ui/icons
+
+- installing python3 and flask.
+> sudo apt install python3-pip
+> pip3 install flask
+> pip3 install flask_restful
+> pip3 install flask_cors
+> pip3 install pymongo
+
+
+- installing docker and docker-compose
+> sudo apt-get update
+> sudo apt-get install \
+	apt-transport-https \
+	ca-certificates \
+	curl \
+	gnupg-agent \
+	software-properties-common
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+> sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   focal \
+   stable"
+ > sudo apt-get update
+ > sudo apt-get install docker-ce docker-ce-cli containerd.io
+ > sudo docker run hello-world
+ 
+ - installing docker compose
+ > sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+ > sudo chmod +x /usr/local/bin/docker-compose
+ > docker-compose --version
+
+- installing mongo db
+> curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+> echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+> sudo apt update
+> sudo apt install mongodb-org
+> sudo systemctl start mongod.service
+> sudo systemctl status mongod
+> sudo systemctl enable mongod
+> mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+> sudo systemctl status mongod
+> sudo systemctl stop mongod
+> sudo systemctl start mongod
+> sudo systemctl restart mongod
+> sudo systemctl disable mongod
+> sudo systemctl enable mongod
+> mongod --version
+
+> cd keeper-app/backend
+> touch docker-compose.yml
+> mkdir api
+> mkdir db
+> touch api/Dockerfile
+> touch db/Dockerfile
+> touch api/requirements.txt
+> touch api/app.py
+> code .
+
+> sudo docker-compose build
+> sudo docker-compose up
+
+- installing postman
+> sudo snap install postman
+> postman &
+
+
+> initialize git
+> sudo apt-get install git
+>
+
+- create an EC2 instance on AWS 
+- connect EC2 using ssh
+> sudo chmod 400 KeeperAppUbuntuServer.pem 
+> sudo ssh -i ./otherfiles/KeeperServer.pem ubuntu@ec2.amazonaws.com
+
+- creating git repository on GITHUB.
+
+> git init
+> git remote add origin https://github.com/repository-name
+> git status
+> git add .
+> git config --global user.email "email.address"
+> git config --global user.name "username"
+> git commit -m "Initial commit"
+> git push origin master
+>
+
+ 
+
+- setting up environment on AWS.
+- installing required programs.
+
+
+
