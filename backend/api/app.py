@@ -26,6 +26,10 @@ class JSONEncoder(json.JSONEncoder):
             return str(o)
         return json.JSONEncoder.default(self, o)
 
+class Home(Resource):
+    def get(self):
+        return "OK"
+
 class Note(Resource):
     def post(self):
         postedData = request.get_json()
@@ -87,6 +91,8 @@ class Helper:
 
 api.add_resource(Note, '/api/note')
 api.add_resource(Notes, '/api/notes')
+api.add_resource(Home, '/')
+
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0', port=80)
