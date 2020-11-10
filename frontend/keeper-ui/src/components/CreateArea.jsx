@@ -32,7 +32,7 @@ function CreateArea(props) {
     };
 
     if(note && note.title && note.note){
-      fetch("/api/note", options)
+      fetch(process.env.REACT_APP_API_URL + "/api/note", options)
       .then(res => {
         return res.json();
       }).then(result => {

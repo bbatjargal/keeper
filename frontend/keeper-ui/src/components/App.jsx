@@ -11,7 +11,7 @@ function App() {
   const [contentHeight, setContentHeight] = useState(0);
 
   const getNotes = () => {
-    fetch("/api/notes")
+    fetch(process.env.REACT_APP_API_URL + "/api/notes")
     .then(res => {
       return res.json();
     }).then(notes => {
@@ -49,7 +49,7 @@ function App() {
       },
       body: JSON.stringify({"id": id})
     };
-    fetch("/api/note", options)
+    fetch(process.env.REACT_APP_API_URL + "/api/note", options)
       .then(res => {
         return res.json();
       }).then(result => {
